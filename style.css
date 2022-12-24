@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.404);
+}
+.field{
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.field:hover{
+    background-color: rgba(128, 128, 128, 0.363);
+}
+.turns{
+    width: 400px;
+    display: flex;
+    gap: 20px;
+}
+.turns button{
+    flex: 1;
+    padding: 20px;
+    font-size: 16px;
+}
+.selected{
+    background-color: lightgreen;
+}
+
+.resultPane{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.resultPane .result{
+    color: white;
+    font-size: 5rem;
+}
+.resultPane .restart{
+    padding: 20px 40px;
+    font-size: 2rem;
+    background-color: lightblue;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.resultPane .restart:hover{
+    background-color: rgb(134, 185, 202);
+}
+.show{
+    display: flex;
+}
